@@ -5,7 +5,7 @@
 
 // let is a command to create a new variable.  It pulls a box out of the aether and gives it a name.  
 
-console.log("Hello, world!")
+// console.log("Hello, world!");
 
 // let fish;
 // fish = 3;
@@ -23,7 +23,7 @@ console.log("Hello, world!")
 // const second = 2;
 // var third = 3;
 
-// console.log(first);
+// console.log("first is ", first);
 // console.log(second);
 // console.log(third);
 
@@ -39,3 +39,6 @@ console.log("Hello, world!")
 // console.log(third);
 
 // OPERATORS: +, -, *, /, ** (exponent), % (modulo)
+console.log(3 + 5);
+console.log(8 / 3);
+console.log((35 + 5) / 4);
