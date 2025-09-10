@@ -54,7 +54,7 @@ let name = "Steve";
 
 // Backticks allow you to embed code into the string
 
-console.log(`3 + 4 is equal to ${3 + 4}`);
+// console.log(`3 + 4 is equal to ${3 + 4}`);
 
 // char doesn't exist in JavaScript, but does exist in C and Java. 
 // it's basically a string of length 1.  
@@ -63,7 +63,7 @@ console.log(`3 + 4 is equal to ${3 + 4}`);
 let nameFieldValid = true;  // the person input a valid name
 let ageFieldValid = false;  // the person did not input a valid age
 
-console.log(3 > 1);
+// console.log(3 > 1);
 
 // null: null contains only 1 value: "null".  "nothing", "empty", "value unknown";
 
@@ -73,7 +73,7 @@ let age = null;
 
 // undefined: which means that a value has not been assigned.
 let fish;
-console.log(fish);
+// console.log(fish);
 
 
 // Objects and Symbols.  Objects can hold complex data structures.  Symbols
@@ -82,3 +82,51 @@ console.log(fish);
 
 
 // Practice with strings:  
+// Quick voacbulary distinction to make:  functions vs. methods.
+// functions are "generic".  
+// a method is a function that is bound to a specific data type
+// functions are usually called by stating the name of the function, and 
+// what you want it applied to.  e.g. average(dataSet)
+// whereas a method usually follows what it is being applied to
+// e.g. text.at(2)
+
+// here are several string methods:
+
+// length (technically a property, not strictly a method)
+
+let text = "QWERTYUIOPASDFGHJKLZXCVBNM";
+console.log(text.length);
+
+// ways to extract characters from a string:
+// charAt(): returns the character at the indicated "slot" in the string
+
+text = "Stevie T. Badin";
+console.log(text.charAt(3));
+
+// charCodeAt(): returns the UTF-16 code of the character at the specified index
+console.log(text.charCodeAt(3));
+
+let shrug = "¯\_(ツ)_/¯";
+console.log(shrug.charCodeAt(0));
+console.log(shrug.charCodeAt(4));
+
+// .at() is a more useful and preferable option to charAt();
+
+console.log(text.at(-3));
+
+// .concat() stands for concatenation, allows you to concatenate 2 or more strings
+let text1 = "Hello";
+let text2 = "Stevie";
+
+text3 = text1.concat(", ", text2, " ", shrug);
+console.log(text3);
+
+text4 = text1 + " " + text2;
+console.log(text4);
+
+// if you want to extract a "substring" you can use three methods:
+// .slice(): returns a string that starts from the given index and ends before the second index.
+console.log(text);
+console.log(text.slice(3,8))
+
+// if you 
