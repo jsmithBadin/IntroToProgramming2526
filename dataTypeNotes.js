@@ -94,39 +94,103 @@ let fish;
 
 // length (technically a property, not strictly a method)
 
-let text = "QWERTYUIOPASDFGHJKLZXCVBNM";
-console.log(text.length);
+// let text = "QWERTYUIOPASDFGHJKLZXCVBNM";
+// console.log(text.length);
 
-// ways to extract characters from a string:
-// charAt(): returns the character at the indicated "slot" in the string
+// // ways to extract characters from a string:
+// // charAt(): returns the character at the indicated "slot" in the string
 
 text = "Stevie T. Badin";
-console.log(text.charAt(3));
+// console.log(text.charAt(3));
 
-// charCodeAt(): returns the UTF-16 code of the character at the specified index
-console.log(text.charCodeAt(3));
+// // charCodeAt(): returns the UTF-16 code of the character at the specified index
+// console.log(text.charCodeAt(3));
 
-let shrug = "¯\_(ツ)_/¯";
-console.log(shrug.charCodeAt(0));
-console.log(shrug.charCodeAt(4));
+// let shrug = "¯\_(ツ)_/¯";
+// console.log(shrug.charCodeAt(0));
+// console.log(shrug.charCodeAt(4));
 
 // .at() is a more useful and preferable option to charAt();
 
-console.log(text.at(-3));
+// console.log(text.at(-3));
 
 // .concat() stands for concatenation, allows you to concatenate 2 or more strings
-let text1 = "Hello";
-let text2 = "Stevie";
+// let text1 = "Hello";
+// let text2 = "Stevie";
 
-text3 = text1.concat(", ", text2, " ", shrug);
-console.log(text3);
+// text3 = text1.concat(", ", text2, " ", shrug);
+// console.log(text3);
 
-text4 = text1 + " " + text2;
-console.log(text4);
+// text4 = text1 + " " + text2;
+// console.log(text4);
 
 // if you want to extract a "substring" you can use three methods:
 // .slice(): returns a string that starts from the given index and ends before the second index.
 console.log(text);
 console.log(text.slice(3,8))
 
-// if you 
+// if you leave out the second value you will get the rest of the string.
+// you can also use negative indexing.
+
+console.log(text.slice(-5));
+
+// [] is a notation that allows to do something similar to .at().
+// but, it can be somewhat unpredicatble in javaScript.  
+
+console.log(text[5]);
+
+// .substring(); similar to slice, but start and end values that are less than 0 are
+// treated as 0.  
+
+// .substr(); where the second number was how long you wanted the string to be;
+// this is deprecated, so don't use it.
+
+
+// .toUpperCase() 
+console.log(text.toUpperCase());
+
+// .toLowerCase()
+console.log(text.toLowerCase());
+
+text = "                   Stevie T. Badin                              ";
+
+console.log(text);
+
+// .trim() to remove whitespace from both ends of a string
+console.log(text.trim());
+
+// you can also .trimStart() and .trimEnd()
+
+
+// .padStart() allows you to add "padding" to the start of a string to get to given length
+let newText = "Rams";
+let padded = newText.padStart(10, "*")
+console.log(padded);
+
+// .repeat() a method that returns a string with a number of copies.  This returns a
+// new string, it does not modify the original.
+
+let newNewText = newText.repeat(4);
+console.log(newNewText);
+
+// .replace(): replaces a speicfied value with another value.  Only applied to the 
+// first instance of the matching key phrase
+newNewText = newNewText.replace("Rams", "Badin");
+console.log(newNewText)
+
+//.replaceAll() - replaces ALL instances of the matching key phrase, BUT doesn't 
+// work with 100% of browsers. 
+newNewText = newNewText.replaceAll("Rams", "Badin");
+console.log(newNewText)
+
+// You also need to be careful when implementing something like a replaceAll:
+// Example:
+
+let startingText = "First elected to parliament in 1991, he served in numerous other ministerial positions and was the Leader of the Opposition from 2011 to 2013, as the parliamentary party leader of the Nepali Congress."
+console.log(startingText);
+
+let replacedText = startingText.replaceAll(" he ", " she ");
+console.log(replacedText);
+
+// When doing something to EVERYTHING be careful to think about special cases
+
