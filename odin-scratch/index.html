@@ -36,13 +36,39 @@
         }
     });
 
+    console.log({adults});
+
+    const isAdult = people.some(person => ((new Date()).
+        getFullYear())- person.year >= 19);
+
+    console.log({isAdult});
+
+      const allAdults = people.every(function(person){
+        const currentYear = (new Date()).getFullYear();
+        if(currentYear - person.year >= 19){
+            return true;
+        }
+    });
+
+    console.log({allAdults});
+
+    const areAllAdult = people.every(person => ((new Date()).
+        getFullYear())- person.year >= 19);
+
+    console.log({areAllAdult});
+
+
     // Array.prototype.find()
     // Find is like filter, but instead returns just the one you are looking for
     // find the comment with the ID of 823423
 
+    
+
     // Array.prototype.findIndex()
     // Find the comment with this ID
     // delete the comment with the ID of 823423
+
+
 
   </script>
 </body>
